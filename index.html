@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Aura of Gupta Ji</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Plus+Jakarta+Sans:wght@300;800&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: #faf9f6; /* Off-white aesthetic */
+            color: #1a1a1a;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* 1. Minimalist Header */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .aesthetic-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-style: italic;
+            color: #d4a373; /* Muted Gold */
+            line-height: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .sub-text {
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: #999;
+        }
+
+        /* 2. The "Aura" Sections */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .vibe-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 2px; /* Sharp modern look */
+            box-shadow: 10px 10px 0px #e9edc9; /* Pastel offset shadow */
+            border: 1px solid #eee;
+        }
+
+        .vibe-card h3 {
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            color: #bc6c25;
+        }
+
+        .vibe-card p {
+            font-size: 0.9rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        /* 3. The "Action" Footer */
+        .interaction {
+            margin-top: 50px;
+            text-align: center;
+            padding-bottom: 100px;
+        }
+
+        .btn-minimal {
+            background: transparent;
+            border: 1px solid #1a1a1a;
+            padding: 15px 40px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .btn-minimal:hover {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .heart-icon {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <p class="sub-text">Collection No. 01</p>
+        <h1 class="aesthetic-title">Naira.</h1>
+        <p class="sub-text">The "Gupta Ji" Essence</p>
+    </section>
+
+    <div class="grid-layout">
+        <div class="vibe-card">
+            <h3>01. THE ENERGY</h3>
+            <p>Direct. Unfiltered. Action-oriented. She doesn't believe in long explanations—her presence speaks for itself.</p>
+        </div>
+        <div class="vibe-card">
+            <h3>02. THE PALETTE</h3>
+            <p>Midnight snacks and 10 PM conversations. A specialist in the art of <i>perfect</i> Maggi and spontaneous vibes.</p>
+        </div>
+        <div class="vibe-card" style="grid-column: span 2;">
+            <h3>03. THE MANTRA</h3>
+            <p>Master of her own space. From maintaining streaks with discipline to giving the most witty comebacks—she is the main character of her story.</p>
+        </div>
+    </div>
+
+    <div class="interaction">
+        <button class="btn-minimal" onclick="greet()">Validate Vibe</button>
+        <span class="heart-icon">✨</span>
+        <p style="font-size: 0.6rem; margin-top: 20px; opacity: 0.5;">DESIGNED BY PANDEY JI | FEB '26</p>
+    </div>
+
+    <script>
+        function greet() {
+            alert("Vibe Checked: 100% Authentic Gupta Ji Style. \nNo cap, just vibes. ✨");
+        }
+    </script>
+
+</body>
+</html>
