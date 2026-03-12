@@ -3,139 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Aura of Gupta Ji</title>
+    <title>The Gupta Ji Archive</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Plus+Jakarta+Sans:wght@300;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Montserrat:wght@100;300;900&display=swap');
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            background: #faf9f6; /* Off-white aesthetic */
-            color: #1a1a1a;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            overflow-x: hidden;
-        }
 
-        /* 1. Minimalist Header */
-        .hero {
+        body {
+            background: #080808;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
             height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            overflow: hidden;
         }
 
-        .aesthetic-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 10vw, 6rem);
-            font-style: italic;
-            color: #d4a373; /* Muted Gold */
-            line-height: 0.8;
-            margin-bottom: 20px;
+        /* Ambient Glow Background */
+        .ambient-glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(212, 163, 115, 0.1) 0%, transparent 70%);
+            z-index: 1;
         }
 
-        .sub-text {
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            font-size: 0.7rem;
-            font-weight: 800;
-            color: #999;
-        }
-
-        /* 2. The "Aura" Sections */
-        .grid-layout {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            padding: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .vibe-card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 2px; /* Sharp modern look */
-            box-shadow: 10px 10px 0px #e9edc9; /* Pastel offset shadow */
-            border: 1px solid #eee;
-        }
-
-        .vibe-card h3 {
-            font-size: 0.8rem;
-            margin-bottom: 10px;
-            color: #bc6c25;
-        }
-
-        .vibe-card p {
-            font-size: 0.9rem;
-            font-weight: 300;
-            line-height: 1.5;
-        }
-
-        /* 3. The "Action" Footer */
-        .interaction {
-            margin-top: 50px;
+        .container {
+            position: relative;
+            z-index: 10;
             text-align: center;
-            padding-bottom: 100px;
+            width: 90%;
+            max-width: 600px;
         }
 
-        .btn-minimal {
-            background: transparent;
-            border: 1px solid #1a1a1a;
-            padding: 15px 40px;
-            font-size: 0.8rem;
+        /* 1. The Main Identity */
+        .header-section {
+            margin-bottom: 60px;
+        }
+
+        .name-aura {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3.5rem, 10vw, 7rem);
+            font-style: italic;
+            color: #d4a373;
+            line-height: 0.8;
+            margin-bottom: 10px;
+            animation: fadeInDown 1.5s ease;
+        }
+
+        .subtitle {
+            font-size: 0.6rem;
+            letter-spacing: 8px;
+            color: #666;
             text-transform: uppercase;
-            font-weight: 800;
+        }
+
+        /* 2. The Voice Visualizer (Central focus) */
+        .voice-box {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin: 40px 0;
+        }
+
+        .bar {
+            width: 3px;
+            background: #d4a373;
+            border-radius: 50px;
+            animation: bounce 0.8s ease-in-out infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% { height: 10px; opacity: 0.3; }
+            100% { height: 120px; opacity: 1; box-shadow: 0 0 15px #d4a373; }
+        }
+
+        /* 3. The 3-Call Logic */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            text-align: left;
+        }
+
+        .info-card h4 {
+            color: #d4a373;
+            font-size: 0.7rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .info-card p {
+            font-weight: 100;
+            font-size: 0.85rem;
+            color: #bbb;
+            line-height: 1.4;
+        }
+
+        /* 4. The Action Button */
+        .validate-btn {
+            background: transparent;
+            border: 1px solid #d4a373;
+            color: #d4a373;
+            padding: 15px 40px;
+            font-size: 0.7rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
             cursor: pointer;
             transition: 0.4s;
+            margin-top: 50px;
         }
 
-        .btn-minimal:hover {
-            background: #1a1a1a;
-            color: #fff;
+        .validate-btn:hover {
+            background: #d4a373;
+            color: #000;
+            box-shadow: 0 0 30px rgba(212, 163, 115, 0.4);
         }
 
-        .heart-icon {
-            font-size: 1.5rem;
-            margin-top: 20px;
-            display: block;
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 30px;
+            font-size: 0.5rem;
+            letter-spacing: 4px;
+            color: #333;
         }
 
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <p class="sub-text">Collection No. 01</p>
-        <h1 class="aesthetic-title">Naira.</h1>
-        <p class="sub-text">The "Gupta Ji" Essence</p>
-    </section>
+    <div class="ambient-glow"></div>
 
-    <div class="grid-layout">
-        <div class="vibe-card">
-            <h3>01. THE ENERGY</h3>
-            <p>Direct. Unfiltered. Action-oriented. She doesn't believe in long explanations—her presence speaks for itself.</p>
+    <div class="container">
+        <div class="header-section">
+            <p class="subtitle">Pandey Ji Presents</p>
+            <h1 class="name-aura">Naira G.</h1>
+            <p class="subtitle">The Essence of Sukoon</p>
         </div>
-        <div class="vibe-card">
-            <h3>02. THE PALETTE</h3>
-            <p>Midnight snacks and 10 PM conversations. A specialist in the art of <i>perfect</i> Maggi and spontaneous vibes.</p>
+
+        <div class="voice-box">
+            <div class="bar" style="animation-delay: 0.1s; height: 40px;"></div>
+            <div class="bar" style="animation-delay: 0.3s; height: 80px;"></div>
+            <div class="bar" style="animation-delay: 0.2s; height: 100px;"></div>
+            <div class="bar" style="animation-delay: 0.5s; height: 60px;"></div>
+            <div class="bar" style="animation-delay: 0.4s; height: 90px;"></div>
+            <div class="bar" style="animation-delay: 0.6s; height: 30px;"></div>
+            <div class="bar" style="animation-delay: 0.2s; height: 70px;"></div>
         </div>
-        <div class="vibe-card" style="grid-column: span 2;">
-            <h3>03. THE MANTRA</h3>
-            <p>Master of her own space. From maintaining streaks with discipline to giving the most witty comebacks—she is the main character of her story.</p>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h4>Voice ID</h4>
+                <p>3 calls, aur har call mein wahi pyaari mithaas. Alag hi level ka sukoon.</p>
+            </div>
+            <div class="info-card">
+                <h4>Vibe Status</h4>
+                <p>Seedhi baat, no bakwas. Unfiltered aur bilkul authentic.</p>
+            </div>
         </div>
+
+        <button class="validate-btn" onclick="checkAura()">Validate Aura</button>
     </div>
 
-    <div class="interaction">
-        <button class="btn-minimal" onclick="greet()">Validate Vibe</button>
-        <span class="heart-icon">✨</span>
-        <p style="font-size: 0.6rem; margin-top: 20px; opacity: 0.5;">DESIGNED BY PANDEY JI | FEB '26</p>
-    </div>
+    <footer>FEB 2026 / GUPTA JI COLLECTION</footer>
 
     <script>
-        function greet() {
-            alert("Vibe Checked: 100% Authentic Gupta Ji Style. \nNo cap, just vibes. ✨");
+        function checkAura() {
+            alert("Vibe Checked: 100% Genuine. \nGupta Ji ki voice? Ekdum tezz aur pyari. ✨");
         }
     </script>
 
